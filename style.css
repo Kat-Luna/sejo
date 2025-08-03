@@ -1,0 +1,82 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #000000, #0f0f0f, #1a1a1a);
+  background-size: 200% 200%;
+  animation: gradientBG 20s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 25px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: gold;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+}
+
+p {
+  font-size: 1.1rem;
+  color: #f5f5f5;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+button {
+  background: black;
+  color: gold;
+  border: 2px solid gold;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px gold;
+}
+
+button:hover {
+  background: gold;
+  color: black;
+  box-shadow: 0 0 15px gold;
+}
+
+.footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  font-style: italic;
+}
