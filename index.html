@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Good Morning Papii 💛</title>
+  <title>Hey SEJO ❤️</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;600&display=swap"
     rel="stylesheet">
@@ -17,7 +17,7 @@
 
     body {
       font-family: 'Playfair Display', serif;
-      background: linear-gradient(135deg, #000428, #004e92);
+      background: linear-gradient(135deg, #000000, #001f3f);
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -28,44 +28,30 @@
     }
 
     .card {
-      background: rgba(0, 0, 0, 0.85);
-      /* 85% transparent black */
+      background: #000000;
       border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-      padding: 30px 20px;
-      max-width: 380px;
+      box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+      padding: 35px 25px;
+      max-width: 420px;
       width: 100%;
       text-align: center;
-      position: relative;
-      z-index: 2;
-      animation: float 5s ease-in-out infinite;
       color: white;
-    }
-
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
+      z-index: 2;
     }
 
     h1 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
+      font-size: 1.9rem;
+      margin-bottom: 20px;
       color: gold;
+      text-shadow: 1px 1px 8px #ffd70080;
     }
 
     p {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      color: #f3f3f3;
+      font-size: 1.05rem;
+      color: #eaeaea;
       margin-bottom: 25px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .btns {
@@ -73,16 +59,18 @@
       justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
+      margin-top: 15px;
     }
 
     .btn {
-      padding: 10px 16px;
+      padding: 10px 18px;
       border: none;
       border-radius: 50px;
       font-weight: bold;
       font-size: 0.95rem;
       cursor: pointer;
       transition: all 0.3s ease;
+      box-shadow: 0 0 10px #00000055;
     }
 
     .play-btn {
@@ -91,82 +79,47 @@
       border: 2px solid gold;
     }
 
-    .save-btn {
-      background: gold;
-      color: black;
-      border: 2px solid black;
-    }
-
-    .pdf-btn {
-      background: #fff;
-      color: #000;
-      border: 2px solid #aaa;
-    }
-
     .btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 15px gold;
     }
 
     .footer {
       position: absolute;
-      bottom: 15px;
+      bottom: 12px;
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.9rem;
-      color: #f0f0f0;
+      font-size: 0.85rem;
+      color: #cccccc;
+      text-align: center;
+      width: 100%;
+      z-index: 2;
     }
 
-    .hearts {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      overflow: hidden;
-      z-index: 1;
-    }
-
+    /* ❤️ Floating Hearts */
     .heart {
       position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: rgba(255, 0, 128, 0.6);
-      transform: rotate(45deg);
-      animation: rise 10s infinite linear;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      color: red;
+      font-size: 20px;
+      animation: fallDown 6s linear infinite;
+      opacity: 0.8;
+      z-index: 0;
     }
 
-    .heart::before,
-    .heart::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: rgba(255, 0, 128, 0.6);
-      border-radius: 50%;
-    }
-
-    .heart::before {
-      top: -10px;
-      left: 0;
-    }
-
-    .heart::after {
-      top: 0;
-      left: -10px;
-    }
-
-    @keyframes rise {
+    @keyframes fallDown {
       0% {
-        bottom: -20px;
+        transform: translateY(-50px) rotate(0deg);
         opacity: 0;
       }
 
-      50% {
+      30% {
         opacity: 1;
       }
 
       100% {
-        bottom: 100%;
+        transform: translateY(110vh) rotate(360deg);
         opacity: 0;
       }
     }
@@ -174,49 +127,31 @@
 </head>
 
 <body>
-  <div class="hearts">
-    <div class="heart" style="left: 20%; animation-delay: 0s;"></div>
-    <div class="heart" style="left: 40%; animation-delay: 2s;"></div>
-    <div class="heart" style="left: 60%; animation-delay: 4s;"></div>
-    <div class="heart" style="left: 80%; animation-delay: 6s;"></div>
-  </div>
+  <div class="card">
+    <h1>Hey SEJO ❤️</h1>
+    <p>
+      We were written in the stars<br />
+      before time began.
+    </p>
 
-  <div class="card" id="card">
-    <h1>Good Morning Papii ❤️</h1>
-    <p>We were written in the stars before time began, Sejo 💫</p>
     <div class="btns">
-      <a href="https://www.youtube.com/watch?v=u9GqI2zfOZc" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.youtube.com/watch?v=u9GqI2zfOZc&list=RDu9GqI2zfOZc&start_radio=1&pp=ygURbGl0dGxlIGJpdCBiZXR0ZXKgBwE%3D"
+        target="_blank" rel="noopener noreferrer">
         <button class="btn play-btn">▶️ Play Song</button>
       </a>
-      <button class="btn save-btn" onclick="saveImage()">📸 Save as Image</button>
-      <button class="btn pdf-btn" onclick="saveAsPDF()">📄 Save as PDF</button>
     </div>
   </div>
 
-  <div class="footer">By Ginger 💛</div>
+  <div class="footer">From Ginger💛 </div>
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
-    function saveImage() {
-      html2canvas(document.querySelector("#card")).then(canvas => {
-        const link = document.createElement("a");
-        link.download = "GoodMorning27.png";
-        link.href = canvas.toDataURL("image/png");
-        link.click();
-      });
-    }
-
-    async function saveAsPDF() {
-      const { jsPDF } = window.jspdf;
-      const canvas = await html2canvas(document.querySelector("#card"));
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF();
-      const width = pdf.internal.pageSize.getWidth();
-      const height = (canvas.height * width) / canvas.width;
-      pdf.addImage(imgData, 'PNG', 0, 0, width, height);
-      pdf.save("GoodMorning27.pdf");
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDelay = Math.random() * 5 + "s";
+      heart.innerHTML = "❤️";
+      document.body.appendChild(heart);
     }
   </script>
 </body>
